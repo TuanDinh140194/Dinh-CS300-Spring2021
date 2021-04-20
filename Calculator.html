@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+        var Isvalid = false;
+        var first_number = prompt("Enter the first number: ");
+         
+        do{
+            if(isNaN(first_number) == false)
+            {
+                Isvalid = true;
+            }
+            else
+                first_number = prompt("The input is not a number. Please enter again: ");
+                
+        }while(Isvalid == false)
+
+        
+
+        Isvalid = false;
+        var operator = prompt("Enter the mathematical operator(+, -, /, *)");
+        do{
+            if(operator == '+' || operator == '-' || operator == '/' || operator == '*')
+            {
+                Isvalid = true;
+            }
+            else
+                operator = prompt("The input is not an operator. Please enter again: ");
+
+        }while(Isvalid == false)
+
+        Isvalid = false;
+        var second_number = prompt("Enter the second number: ");
+        do{
+            if(isNaN(second_number) == false)
+            {
+                Isvalid = true;
+            }
+            else
+                second_number = prompt("The input is not a number. Please enter again: ");
+
+
+        }while(Isvalid == false)
+
+        switch(operator){
+            case "+":
+                result = parseInt(first_number) + parseInt(second_number);
+                break;
+            case "-":
+                result = parseInt(first_number) - parseInt(second_number);
+                break;
+            case "*":
+                result = parseInt(first_number) * parseInt(second_number);
+                break;
+            case "/":
+                result = parseInt(first_number) / parseInt(second_number);
+                break;
+        }
+
+        alert("The answer is: " + result); 
+
+
+        
+        </script>
+
+    </body>
+
+</html>
