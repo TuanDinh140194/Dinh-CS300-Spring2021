@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h1> A Fancy Javascript Calculator by Dinh, Tuan </h1>
+        <form name="calculation">
+            <input type="number" id="number1"></input>
+            <select id="operator">
+                <option id="addition">+</option>
+                <option id="substract">-</option>
+                <option id="division">/</option>
+                <option id="multiplication">*</option>
+            </select>
+            <input type="number" id="number2">  =   </input>
+            <input type="number" id="result"></input>
+            <br>
+           </br>
+            <input type="submit" id="submit" class="btn btn-primary" value="COMPUTE" onclick="fancyCalculator()" />
+        </form>
+    </body>
+
+    <script>
+        function fancyCalculator(){
+            event.preventDefault()
+            number1 = calculation.number1.value
+            operator = calculation.operator.value
+            number2 = calculation.number2.value
+            let final_result
+        
+        if(operator == "+"){
+            final_result = parseInt(number1) + parseInt(number2)
+        }
+        else if (operator == "-"){
+            final_result = parseInt(number1) - parseInt(number2)
+        }
+        else if (operator == "/"){
+            final_result = parseInt(number1) / parseInt(number2)
+        }
+        else if (operator == "*"){
+            final_result = parseInt(number1) * parseInt(number2)
+        }
+        else{
+            final_result = "Invalid number"
+        }
+       
+
+        calculation.result.value = final_result
+    }
+    </script>
+</html>
+
+    
